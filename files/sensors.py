@@ -14,7 +14,7 @@ if vr("temp") is not None:
 if "temp" in be.devices.keys():
     vr("no", False)
     for pv[get_pid()]["i"] in be.devices["temp"].keys():
-        term.write(vr("i").name + "\nAdapter: kernel\ntemp1:" + str(vr("i").temperature) + "°C\n")
+        term.write(be.devices["temp"][vr("i")].name + "\nAdapter: kernel\ntemp1: " + str(be.devices["temp"][vr("i")].temperature) + "°C\n")
 
 if cpu.voltage is not None:
     vr("no", False)
